@@ -79,13 +79,13 @@ export default function Navbar() {
             <span
               className="w-2 h-2 rounded-full animate-pulse"
               style={{
-                background: "var(--color-success)",
-                boxShadow: "0 0 8px var(--color-success)",
+                background: "var(--color-accent)",
+                boxShadow: "0 0 8px var(--color-accent-glow)",
               }}
             />
             <span
               className="text-xs font-medium tracking-wider uppercase"
-              style={{ color: "var(--color-success)" }}
+              style={{ color: "var(--color-accent)" }}
             >
               Available
             </span>
