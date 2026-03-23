@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/data/data";
 import { useActiveSection } from "@/hooks/hooks";
+import logo from "@/assets/me/logo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,8 +38,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-18 flex items-center justify-between">
         <motion.a
           href="#"
-          className="text-xl font-bold tracking-tight accent-glow"
-          style={{ fontFamily: "var(--font-display)" }}
+          className="block"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={(e) => {
@@ -46,7 +46,7 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          {"<YD />"}
+          <img src={logo} alt="YM Logo" className="h-10 w-auto" />
         </motion.a>
 
         <div className="hidden md:flex items-center gap-1">
