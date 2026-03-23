@@ -58,7 +58,7 @@ export default function ContactSection() {
       id="contact"
       ref={sectionRef}
       className="py-32 px-6 relative"
-      style={{ background: "var(--color-surface)" }}
+      style={{ background: "var(--color-bg)" }}
     >
       <div className="max-w-6xl mx-auto">
         <SectionTitle

@@ -10,7 +10,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+// import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -41,16 +41,16 @@ export default function App() {
           <LazySection minHeight="80vh">
             <ExperienceSection />
           </LazySection>
-          <WaveDivider flip fillColor="var(--color-surface)" />
-          <LazySection minHeight="60vh">
+          {/* <WaveDivider flip fillColor="var(--color-surface)" /> */}
+          {/* <LazySection minHeight="60vh">
             <TestimonialsSection />
-          </LazySection>
-          <WaveDivider fillColor="var(--color-surface)" />
+          </LazySection> */}
+          <WaveDivider fillColor="var(--color-bg)" />
           <LazySection minHeight="70vh">
             <ContactSection />
           </LazySection>
         </main>
-        <Footer />
+        {/* <Footer /> */}
         <BackToTop />
       </>
     </ThemeProvider>

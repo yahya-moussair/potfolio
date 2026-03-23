@@ -124,6 +124,7 @@ export const EXPERIENCE = [
       "Développement d’applications web dynamiques avec Laravel, React et Inertia.js.",
       "Intégration et consommation d’API RESTful pour enrichir les fonctionnalités.",
       "Optimisation des performances et amélioration continue de l’expérience utilisateur.",
+      "Développement d’applications mobiles avec React Native.",
     ],
   },
   {
