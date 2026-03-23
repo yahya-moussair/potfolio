@@ -106,7 +106,7 @@ export default function HeroSection() {
             View My Work
             <ExternalLink className="ml-2" size={18} />
           </Button>
-          <Button
+          {/* <Button
             variant="outline"
             size="lg"
             className="group relative overflow-hidden"
@@ -115,7 +115,7 @@ export default function HeroSection() {
               Download CV
               <ChevronDown className="ml-2 transition-transform group-hover:translate-y-0.5" size={18} />
             </span>
-          </Button>
+          </Button> */}
         </motion.div>
       </motion.div>
 

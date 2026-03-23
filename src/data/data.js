@@ -11,7 +11,9 @@ export const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Contact"
 
 export const JOB_TITLES = [
   "Full Stack Developer",
-  "React Engineer",
+  "Mobile Developer",
+  "Backend Developer",
+  "Frontend Developer",
   "UI Craftsman",
   "Problem Solver",
 ];
