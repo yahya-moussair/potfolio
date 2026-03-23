@@ -116,36 +116,25 @@ export default projects;
 
 export const EXPERIENCE = [
   {
-    company: "TechNova Inc.",
-    role: "Senior Frontend Engineer",
-    date: "2024 — Present",
-    location: "Remote",
+    company: "LionsGeek",
+    role: "Software Developer",
+    date: "August 2025 — Present",
+    location: "Casablanca, Morocco",
     points: [
-      "Leading the frontend architecture migration from Vue to React with TypeScript",
-      "Reduced bundle size by 42% through code splitting and lazy loading strategies",
-      "Mentoring a team of 4 junior developers with weekly code reviews",
+      "Développement d’applications web dynamiques avec Laravel, React et Inertia.js.",
+      "Intégration et consommation d’API RESTful pour enrichir les fonctionnalités.",
+      "Optimisation des performances et amélioration continue de l’expérience utilisateur.",
     ],
   },
   {
-    company: "DataBridge Solutions",
-    role: "Full Stack Developer",
-    date: "2023 — 2024",
-    location: "New York, NY",
+    company: "VIRTUEL BUSINESS",
+    role: "Web Developer",
+    date: "January 2022 — March 2022",
+    location: "Casablanca, Morocco",
     points: [
-      "Built a real-time data pipeline dashboard serving 10K+ daily active users",
-      "Designed and implemented RESTful APIs handling 2M+ requests per day",
-      "Introduced CI/CD pipelines that cut deployment time from 2 hours to 12 minutes",
-    ],
-  },
-  {
-    company: "PixelCraft Studio",
-    role: "Frontend Developer",
-    date: "2022 — 2023",
-    location: "San Francisco, CA",
-    points: [
-      "Developed interactive landing pages that increased conversion rates by 28%",
-      "Created a reusable component library adopted across 5 internal projects",
-      "Collaborated with UX designers to implement pixel-perfect responsive layouts",
+      "Conception d’un site web pour avocats avec Laravel, PHP, HTML, CSS, Tailwind et Bootstrap.",
+      "Développement de fonctionnalités pour la gestion de documents juridiques.",
+      "Optimisation de l’interface utilisateur et gestion de bases de données avec MySQL.",
     ],
   },
 ];
