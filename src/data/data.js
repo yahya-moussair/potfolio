@@ -1,6 +1,13 @@
 import { HiLightningBolt, HiHeart } from "react-icons/hi";
 import { VscCode } from "react-icons/vsc";
 
+import imgLionsgeek from "@/assets/projects/lionsgeek.PNG";
+import imgMyLionsgeek from "@/assets/projects/mylionsgeek.PNG";
+import imgClbKlb from "@/assets/projects/clb-klb.PNG";
+import imgCasamemoire from "@/assets/projects/casamemoire.PNG";
+import imgPortfolio from "@/assets/projects/portfolio.PNG";
+import imgTivro from "@/assets/projects/miniEcom.PNG";
+
 export const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Contact"];
 
 export const JOB_TITLES = [
@@ -43,9 +50,9 @@ const projects = [
     description:
       "Developed a comprehensive web platform to automate the entire participant lifecycle for Morocco's leading tech community. The application digitizes the journey from initial inquiry to final enrollment, replacing manual processes with a streamlined, data-driven pipeline.",
     category: "fullstack",
-    image: "/images/lionsgeek.png",
+    image: imgLionsgeek,
     tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
-    github: "https://github.com/yahya-moussair/lionsgeek",
+    github: null,
     demo: "https://lionsgeek.ma",
   },
   {
@@ -54,10 +61,10 @@ const projects = [
     description:
       "An all-in-one digital learning platform for LionsGeek that simplifies class scheduling, tracks attendance and performance, and enables seamless communication through real-time notifications.",
     category: "fullstack",
-    image: "/images/mylionsgeek.png",
+    image: imgMyLionsgeek,
     tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
     github: null,
-    demo: "https://my.lionsgeek.ma",
+    demo: "https://mylionsgeek.ma",
   },
   {
     id: 3,
@@ -65,10 +72,10 @@ const projects = [
     description:
       "A web platform for managing a professional alumni network, featuring event management and blog publishing to share updates, organize activities, and enhance community engagement.",
     category: "fullstack",
-    image: "/images/clb-klb.png",
+    image: imgClbKlb,
     tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
-    github: "https://github.com/yahya-moussair/clb-klb",
-    demo: null,
+    github: null,
+    demo: "https://clb-klb.mylionsgeek.ma",
   },
   {
     id: 4,
@@ -76,10 +83,10 @@ const projects = [
     description:
       "A high-performance website for Casamemoire, a leading NGO focused on architectural preservation in Morocco. Custom WordPress architecture managing over 30 years of historical data.",
     category: "tools",
-    image: "/images/casamemoire.png",
+    image: imgCasamemoire,
     tags: ["WordPress", "PHP", "MySQL", "CSS", "JavaScript"],
     github: null,
-    demo: "https://casamemoire.org",
+    demo: "https://new.casamemoire.org",
   },
   {
     id: 5,
@@ -87,10 +94,10 @@ const projects = [
     description:
       "My personal portfolio website built with React, Tailwind CSS, and Framer Motion. Showcases my projects, skills, and experience in a clean and modern design.",
     category: "frontend",
-    image: "/images/portfolio.png",
+    image: imgPortfolio,
     tags: ["React", "Tailwind", "Framer Motion"],
     github: "https://github.com/yahya-moussair/portfolio",
-    demo: "https://yahya.dev",
+    demo: "https://yahyamoussair.vercel.app",
   },
   {
     id: 6,
@@ -98,10 +105,10 @@ const projects = [
     description:
       "A responsive frontend for an e-commerce platform. Focuses on creating a frictionless 'Buy & Sell' experience through a modern, component-based architecture.",
     category: "frontend",
-    image: "/images/tivro-web.png",
+    image: imgTivro,
     tags: ["React", "Tailwind"],
-    github: null,
-    demo: null,
+    github: "https://github.com/yahya-moussair/react_ecommerce_website.git",
+    demo: "https://tivro-web.vercel.app/",
   },
 ];
 
