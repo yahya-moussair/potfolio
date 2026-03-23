@@ -19,9 +19,9 @@ export const JOB_TITLES = [
 ];
 
 export const STATS = [
-  { label: "Years Experience", value: 3, suffix: "+" },
-  { label: "Projects Completed", value: 40, suffix: "+" },
-  { label: "Happy Clients", value: 15, suffix: "+" },
+  { label: "Years Experience", value: 1, suffix: "+" },
+  { label: "Projects Completed", value: 10, suffix: "+" },
+  // { label: "Happy Clients", value: 15, suffix: "+" },
 ];
 
 export const VALUES = [

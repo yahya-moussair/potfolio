@@ -23,7 +23,7 @@ export default function AboutSection() {
           subtitle="A quick glimpse into who I am and what drives me"
           ghostWord="ABOUT"
         />
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -33,7 +33,7 @@ export default function AboutSection() {
               className="text-base md:text-lg leading-relaxed mb-6 tracking-normal"
               style={{ color: "var(--color-text-muted)" }}
             >
-              I&apos;m a passionate software developer with over 3 years of experience
+              I&apos;m a passionate software developer with over a year of experience
               building web applications that people actually enjoy using. I specialize in
               React ecosystems, modern JavaScript, and crafting interfaces that balance
               aesthetics with performance.
@@ -44,11 +44,11 @@ export default function AboutSection() {
             >
               When I&apos;m not coding, you&apos;ll find me exploring new frameworks,
               contributing to open-source projects, or experimenting with generative art.
-              I believe great software comes from empathy — understanding the people who
+              I believe great software comes from empathy, understanding the people who
               will use what you build.
             </p>
 
-            <div className="grid grid-cols-3 gap-6 mb-10">
+            <div className="grid grid-cols-2 gap-6 mb-10">
               {STATS.map((stat, i) => {
                 const { count, ref } = useCountUp(stat.value, 1800, true);
                 return (
@@ -83,7 +83,7 @@ export default function AboutSection() {
               })}
             </div>
 
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               {VALUES.map((val, i) => (
                 <motion.div
                   key={val.title}
@@ -124,7 +124,7 @@ export default function AboutSection() {
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
