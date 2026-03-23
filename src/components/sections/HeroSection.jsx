@@ -59,7 +59,7 @@ export default function HeroSection() {
             fontSize: "clamp(3rem, 10vw, 8rem)",
           }}
         >
-          Yahya Dev
+          Yahya Moussair
         </motion.h1>
 
         <motion.div
