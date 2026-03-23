@@ -39,58 +39,56 @@ export const VALUES = [
 
 export const PROJECTS = [
   {
-    title: "CloudSync Dashboard",
-    description:
-      "Real-time analytics dashboard with live data streams, interactive charts, and team collaboration features.",
-    tags: ["React", "D3.js", "WebSocket", "Node.js"],
+    title: "Lionsgeek",
+    description: "Developed a comprehensive web platform to automate the entire participant lifecycle for Morocco’s leading tech community. The application digitizes the journey from initial inquiry to final enrollment, replacing manual processes with a streamlined, data-driven pipeline.",
+    tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
     category: "Full Stack",
     gradient: "from-[var(--color-accent)] to-[var(--color-accent-2)]",
-    featured: true,
+    image: "../assets/projects/lionsgeek.png",
   },
   {
-    title: "ShopFlow",
+    title: "My Lionsgeek",
     description:
-      "Modern e-commerce platform with AI-powered recommendations, stripe payments, and inventory management.",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Redis"],
+      "An all-in-one digital learning platform for LionsGeek that simplifies class scheduling, tracks attendance and performance, and enables seamless communication through real-time notifications. Designed to improve efficiency, collaboration, and the overall learning experience.",
+    tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
     category: "Full Stack",
     gradient: "from-[var(--color-accent-2)] to-[var(--color-border)]",
-    featured: true,
+    image: "../assets/projects/mylionsgeek.png",
   },
   {
-    title: "PixelForge UI",
+    title: "Clb-Klb",
     description:
-      "A design system and component library with 50+ components, Storybook docs, and theme customization.",
-    tags: ["React", "Storybook", "Tailwind", "TypeScript"],
-    category: "Frontend",
+      "A web platform for managing a professional alumni network, featuring event management and blog publishing to share updates, organize activities, and enhance community engagement through a clean and responsive user experience.",
+    tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
+    category: "Full Stack",
     gradient: "from-[var(--color-border)] to-[var(--color-accent)]",
-    featured: false,
+    image: "../assets/projects/clb-klb.png",
   },
   {
-    title: "DevTerminal",
+    title: "Casamemoire",
     description:
-      "Browser-based terminal emulator with SSH support, session recording, and collaborative sharing.",
-    tags: ["Electron", "Node.js", "xterm.js", "Docker"],
+      "high-performance website for Casamemoire, a leading NGO focused on architectural preservation in Morocco. I transformed their digital presence by creating a custom WordPress architecture that manages over 30 years of historical data while maintaining a clean, contemporary aesthetic.",
+    tags: ["Wordpress", "PHP", "MySQL", "CSS", "JavaScript"],
     category: "Tools",
     gradient: "from-[var(--color-accent)] to-[var(--color-border)]",
-    featured: false,
+    image: "../assets/projects/casamemoire.png",
   },
   {
-    title: "HealthTrack",
+    title: "Portfolio Website",
     description:
-      "Health and fitness tracking app with workout plans, nutrition logging, and progress visualization.",
-    tags: ["React Native", "Firebase", "Charts", "Auth"],
+      "My personal portfolio website built with React, Tailwind CSS, and Framer Motion. It showcases my projects, skills, and experience in a clean and modern design.",
+    tags: ["React", "Tailwind", "Framer Motion"],
     category: "Frontend",
-    gradient: "from-[var(--color-accent-2)] to-[var(--color-accent)]",
-    featured: false,
+    gradient: "from-[var(--color-accent)] to-[var(--color-border)]",
+    image: "../assets/projects/portfolio.png",
   },
   {
-    title: "TaskForge CLI",
-    description:
-      "A powerful CLI tool for project scaffolding, code generation, and automated deployment workflows.",
-    tags: ["Node.js", "Commander", "Inquirer", "Shell"],
-    category: "Tools",
-    gradient: "from-[var(--color-border)] to-[var(--color-accent-2)]",
-    featured: false,
+    title: "Tivro Web",
+    description: "responsive frontend for an e-commerce platform. The project focuses on creating a frictionless 'Buy & Sell' experience through a modern, component-based architecture.",
+    tags: ["React", "Tailwind"],
+    category: "Frontend",
+    gradient: "from-[var(--color-accent)] to-[var(--color-border)]",
+    image: "../assets/projects/tivro-web.png",
   },
 ];
 

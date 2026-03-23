@@ -21,7 +21,7 @@ export default function ProjectsSection() {
   const [filter, setFilter] = useState("All");
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  const categories = ["All", "Frontend", "Full Stack", "Tools"];
+  const categories = ["All", "Frontend", "Full Stack", "Other"];
 
   const filtered =
     filter === "All"

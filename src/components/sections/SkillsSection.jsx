@@ -204,7 +204,7 @@ function CategorySection({ label, tag, skills }) {
             transition: { staggerChildren: 0.05, delayChildren: 0.1 },
           },
         }}
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 relative"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 relative"
       >
         {skills.map((skill, idx) => (
           <SkillCard
