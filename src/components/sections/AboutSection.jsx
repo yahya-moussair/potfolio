@@ -4,6 +4,7 @@ import { STATS, VALUES } from "@/data/data";
 import { clipReveal, fadeUp, scaleIn } from "@/data/animations";
 import { useCountUp } from "@/hooks/hooks";
 import SectionTitle from "@/components/SectionTitle";
+import meImage from "@/assets/me/me.jpg";
 
 export default function AboutSection() {
   const sectionRef = useRef(null);
@@ -139,41 +140,18 @@ export default function AboutSection() {
                 border: "1px solid var(--color-border)",
               }}
             >
+              <img
+                src={meImage}
+                alt="Yahya Dev"
+                className="w-full h-full object-cover relative z-10"
+              />
               <div
-                className="absolute inset-0 rounded-2xl"
+                className="absolute inset-0 rounded-2xl z-20 pointer-events-none"
                 style={{
                   background: "conic-gradient(from 180deg, var(--color-accent), var(--color-accent-2), transparent, var(--color-accent))",
                   opacity: 0.06,
                 }}
               />
-              <svg viewBox="0 0 400 400" className="w-full h-full p-8 relative z-10">
-                <defs>
-                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="var(--color-accent)" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="var(--color-accent-2)" stopOpacity="0.8" />
-                  </linearGradient>
-                  <radialGradient id="haloGrad">
-                    <stop offset="60%" stopColor="transparent" />
-                    <stop offset="80%" stopColor="var(--color-accent)" stopOpacity="0.15" />
-                    <stop offset="100%" stopColor="transparent" />
-                  </radialGradient>
-                </defs>
-                <circle cx="200" cy="200" r="150" fill="url(#haloGrad)">
-                  <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="20s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="200" cy="200" r="120" fill="none" stroke="var(--color-accent)" strokeWidth="0.5" strokeDasharray="8 6" opacity="0.2">
-                  <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="-360 200 200" dur="30s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="200" cy="140" r="55" fill="url(#avatarGrad)" opacity="0.6" />
-                <ellipse cx="200" cy="300" rx="90" ry="60" fill="url(#avatarGrad)" opacity="0.35" />
-                <circle cx="85" cy="85" r="18" fill="var(--color-accent)" opacity="0.1" />
-                <circle cx="330" cy="100" r="12" fill="var(--color-accent-2)" opacity="0.12" />
-                <rect x="65" y="270" width="35" height="35" rx="8" fill="var(--color-accent)" opacity="0.07" />
-                <rect x="310" y="260" width="40" height="40" rx="10" fill="var(--color-accent-2)" opacity="0.07" />
-                <text x="200" y="370" textAnchor="middle" fill="var(--color-accent)" fontSize="13" fontFamily="var(--font-display)" opacity="0.5">
-                  {"<Developer />"}
-                </text>
-              </svg>
               <div
                 className="absolute -top-8 -right-8 w-40 h-40 rounded-full blur-3xl"
                 style={{ background: "var(--color-accent-glow)", opacity: 0.4 }}
@@ -183,6 +161,7 @@ export default function AboutSection() {
                 style={{ background: "rgba(0, 255, 170, 0.15)" }}
               />
             </div>
+            
           </motion.div>
         </div>
       </div>
