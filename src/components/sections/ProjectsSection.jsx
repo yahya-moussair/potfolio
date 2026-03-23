@@ -1,7 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
-import { HiGlobe } from "react-icons/hi";
+import { SiGithub } from "react-icons/si";
+import { HiEye } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,20 +13,45 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PROJECTS } from "@/data/data";
+import projects from "@/data/data";
 import { clipReveal, fadeUp, staggerContainer } from "@/data/animations";
 import SectionTitle from "@/components/SectionTitle";
+
+const CATEGORIES = ["All", "fullstack", "frontend", "tools"];
+
+const CATEGORY_LABELS = {
+  All: "All",
+  fullstack: "Full Stack",
+  frontend: "Frontend",
+  tools: "Other",
+};
+
+function handleImageError(e) {
+  e.currentTarget.style.display = "none";
+  e.currentTarget.parentElement.classList.add("shimmer");
+}
 
 export default function ProjectsSection() {
   const [filter, setFilter] = useState("All");
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  const categories = ["All", "Frontend", "Full Stack", "Other"];
 
   const filtered =
     filter === "All"
-      ? PROJECTS
-      : PROJECTS.filter((p) => p.category === filter);
+      ? projects
+      : projects.filter((p) => p.category === filter);
+
+  const handleCardEnter = useCallback((e) => {
+    e.currentTarget.style.transform = "translateY(-8px)";
+    e.currentTarget.classList.add("border-glow");
+  }, []);
+
+  const handleCardLeave = useCallback((e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.classList.remove("border-glow");
+    e.currentTarget.style.borderColor = "var(--color-border)";
+    e.currentTarget.style.boxShadow = "none";
+  }, []);
 
   return (
     <section
@@ -50,9 +75,9 @@ export default function ProjectsSection() {
         >
           <Tabs defaultValue="All" onValueChange={setFilter}>
             <TabsList>
-              {categories.map((cat) => (
+              {CATEGORIES.map((cat) => (
                 <TabsTrigger key={cat} value={cat}>
-                  {cat}
+                  {CATEGORY_LABELS[cat]}
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -68,7 +93,7 @@ export default function ProjectsSection() {
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
               <motion.div
-                key={project.title}
+                key={project.id}
                 variants={clipReveal}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -83,56 +108,21 @@ export default function ProjectsSection() {
                     borderColor: "var(--color-border)",
                     transition: "transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease",
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.classList.add("border-glow");
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.classList.remove("border-glow");
-                    e.currentTarget.style.borderColor = "var(--color-border)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
+                  onMouseEnter={handleCardEnter}
+                  onMouseLeave={handleCardLeave}
                 >
-                  {project.featured && (
-                    <div
-                      className="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase border-glow"
-                      style={{
-                        background: "linear-gradient(135deg, var(--color-accent), var(--color-accent-2))",
-                        color: "var(--color-bg)",
-                      }}
-                    >
-                      Featured
-                    </div>
-                  )}
-
                   <div
-                    className={`h-48 bg-linear-to-br ${project.gradient} relative overflow-hidden shimmer`}
+                    className="relative overflow-hidden"
+                    style={{ height: 200 }}
                   >
-                    <div
-                      className="absolute inset-0 opacity-15"
-                      style={{
-                        backgroundImage:
-                          "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.12) 1px, transparent 0)",
-                        backgroundSize: "20px 20px",
-                      }}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      decoding="async"
+                      onError={handleImageError}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.div
-                        className="text-white/20 font-bold"
-                        style={{
-                          fontFamily: "var(--font-display)",
-                          fontSize: "clamp(3rem, 5vw, 5rem)",
-                        }}
-                        whileHover={{ scale: 1.1, rotate: 3 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      >
-                        {project.title
-                          .split(" ")
-                          .map((w) => w[0])
-                          .join("")}
-                      </motion.div>
-                    </div>
                     <div
                       className="absolute bottom-0 left-0 right-0 h-16"
                       style={{
@@ -168,16 +158,36 @@ export default function ProjectsSection() {
                     </div>
                   </CardContent>
 
-                  <CardFooter className="gap-3">
-                    <Button size="sm" className="flex-1 btn-shimmer text-xs">
-                      <HiGlobe size={13} className="mr-1.5" />
-                      Live Demo
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex-1 text-xs">
-                      <FaGithub size={13} className="mr-1.5" />
-                      GitHub
-                    </Button>
-                  </CardFooter>
+                  {(project.github || project.demo) && (
+                    <CardFooter className="gap-3">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1"
+                        >
+                          <Button variant="outline" size="sm" className="w-full text-xs">
+                            <SiGithub size={14} className="mr-1.5" />
+                            Code
+                          </Button>
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1"
+                        >
+                          <Button size="sm" className="w-full btn-shimmer text-xs">
+                            <HiEye size={14} className="mr-1.5" />
+                            Live Demo
+                          </Button>
+                        </a>
+                      )}
+                    </CardFooter>
+                  )}
                 </Card>
               </motion.div>
             ))}

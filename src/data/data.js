@@ -36,61 +36,76 @@ export const VALUES = [
   },
 ];
 
-
-export const PROJECTS = [
+const projects = [
   {
+    id: 1,
     title: "Lionsgeek",
-    description: "Developed a comprehensive web platform to automate the entire participant lifecycle for Morocco’s leading tech community. The application digitizes the journey from initial inquiry to final enrollment, replacing manual processes with a streamlined, data-driven pipeline.",
+    description:
+      "Developed a comprehensive web platform to automate the entire participant lifecycle for Morocco's leading tech community. The application digitizes the journey from initial inquiry to final enrollment, replacing manual processes with a streamlined, data-driven pipeline.",
+    category: "fullstack",
+    image: "/images/lionsgeek.png",
     tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
-    category: "Full Stack",
-    gradient: "from-[var(--color-accent)] to-[var(--color-accent-2)]",
-    image: "../assets/projects/lionsgeek.png",
+    github: "https://github.com/yahya-moussair/lionsgeek",
+    demo: "https://lionsgeek.ma",
   },
   {
+    id: 2,
     title: "My Lionsgeek",
     description:
-      "An all-in-one digital learning platform for LionsGeek that simplifies class scheduling, tracks attendance and performance, and enables seamless communication through real-time notifications. Designed to improve efficiency, collaboration, and the overall learning experience.",
+      "An all-in-one digital learning platform for LionsGeek that simplifies class scheduling, tracks attendance and performance, and enables seamless communication through real-time notifications.",
+    category: "fullstack",
+    image: "/images/mylionsgeek.png",
     tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
-    category: "Full Stack",
-    gradient: "from-[var(--color-accent-2)] to-[var(--color-border)]",
-    image: "../assets/projects/mylionsgeek.png",
+    github: null,
+    demo: "https://my.lionsgeek.ma",
   },
   {
+    id: 3,
     title: "Clb-Klb",
     description:
-      "A web platform for managing a professional alumni network, featuring event management and blog publishing to share updates, organize activities, and enhance community engagement through a clean and responsive user experience.",
+      "A web platform for managing a professional alumni network, featuring event management and blog publishing to share updates, organize activities, and enhance community engagement.",
+    category: "fullstack",
+    image: "/images/clb-klb.png",
     tags: ["React", "Laravel", "Sqlite", "Inertia.js", "Tailwind", "Typescript"],
-    category: "Full Stack",
-    gradient: "from-[var(--color-border)] to-[var(--color-accent)]",
-    image: "../assets/projects/clb-klb.png",
+    github: "https://github.com/yahya-moussair/clb-klb",
+    demo: null,
   },
   {
+    id: 4,
     title: "Casamemoire",
     description:
-      "high-performance website for Casamemoire, a leading NGO focused on architectural preservation in Morocco. I transformed their digital presence by creating a custom WordPress architecture that manages over 30 years of historical data while maintaining a clean, contemporary aesthetic.",
-    tags: ["Wordpress", "PHP", "MySQL", "CSS", "JavaScript"],
-    category: "Tools",
-    gradient: "from-[var(--color-accent)] to-[var(--color-border)]",
-    image: "../assets/projects/casamemoire.png",
+      "A high-performance website for Casamemoire, a leading NGO focused on architectural preservation in Morocco. Custom WordPress architecture managing over 30 years of historical data.",
+    category: "tools",
+    image: "/images/casamemoire.png",
+    tags: ["WordPress", "PHP", "MySQL", "CSS", "JavaScript"],
+    github: null,
+    demo: "https://casamemoire.org",
   },
   {
+    id: 5,
     title: "Portfolio Website",
     description:
-      "My personal portfolio website built with React, Tailwind CSS, and Framer Motion. It showcases my projects, skills, and experience in a clean and modern design.",
+      "My personal portfolio website built with React, Tailwind CSS, and Framer Motion. Showcases my projects, skills, and experience in a clean and modern design.",
+    category: "frontend",
+    image: "/images/portfolio.png",
     tags: ["React", "Tailwind", "Framer Motion"],
-    category: "Frontend",
-    gradient: "from-[var(--color-accent)] to-[var(--color-border)]",
-    image: "../assets/projects/portfolio.png",
+    github: "https://github.com/yahya-moussair/portfolio",
+    demo: "https://yahya.dev",
   },
   {
+    id: 6,
     title: "Tivro Web",
-    description: "responsive frontend for an e-commerce platform. The project focuses on creating a frictionless 'Buy & Sell' experience through a modern, component-based architecture.",
+    description:
+      "A responsive frontend for an e-commerce platform. Focuses on creating a frictionless 'Buy & Sell' experience through a modern, component-based architecture.",
+    category: "frontend",
+    image: "/images/tivro-web.png",
     tags: ["React", "Tailwind"],
-    category: "Frontend",
-    gradient: "from-[var(--color-accent)] to-[var(--color-border)]",
-    image: "../assets/projects/tivro-web.png",
+    github: null,
+    demo: null,
   },
 ];
+
+export default projects;
 
 export const EXPERIENCE = [
   {
