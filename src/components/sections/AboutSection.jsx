@@ -4,7 +4,7 @@ import { STATS, VALUES } from "@/data/data";
 import { clipReveal, fadeUp, scaleIn } from "@/data/animations";
 import { useCountUp } from "@/hooks/hooks";
 import SectionTitle from "@/components/SectionTitle";
-import meImage from "@/assets/me/me.jpg";
+import meImage from "../../assets/me/me.jpg";
 
 export default function AboutSection() {
   const sectionRef = useRef(null);

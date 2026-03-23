@@ -102,7 +102,7 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.4, type: "spring", stiffness: 300, damping: 30 }}
               >
                 <Card
-                  className="group overflow-hidden h-full flex flex-col relative"
+                  className="project-card group overflow-hidden h-full flex flex-col relative"
                   style={{
                     background: "var(--color-surface)",
                     borderColor: "var(--color-border)",

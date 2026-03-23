@@ -6,7 +6,8 @@
   --font-body: 'DM Sans', sans-serif;
 }
 
-:root {
+:root,
+[data-theme="dark"] {
   --color-bg: #0e0b0a;
   --color-surface: #1a1412;
   --color-border: #2a1f1b;
@@ -16,11 +17,42 @@
   --color-accent-glow: rgba(255, 122, 24, 0.25);
   --color-accent-2: #ffd166;
   --color-success: #22c55e;
-  --gradient-hero: radial-gradient(ellipse at 20% 50%, rgba(170, 255, 0, 0.08) 0%, transparent 60%),
-                   radial-gradient(ellipse at 80% 20%, rgba(0, 255, 170, 0.06) 0%, transparent 50%),
-                   #0a0a0a;
+  --gradient-hero: radial-gradient(
+      ellipse at 20% 50%,
+      rgba(255, 122, 24, 0.08) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(255, 209, 102, 0.06) 0%,
+      transparent 50%
+    ),
+    #0e0b0a;
   --font-display: 'Space Mono', monospace;
   --font-body: 'DM Sans', sans-serif;
+}
+
+[data-theme="light"] {
+  --color-bg: #fdf8f4;
+  --color-surface: #fff4ec;
+  --color-border: #f0e0d0;
+  --color-text-primary: #1a1008;
+  --color-text-muted: #8a7060;
+  --color-accent: #e86500;
+  --color-accent-glow: rgba(232, 101, 0, 0.2);
+  --color-accent-2: #f5a623;
+  --color-success: #16a34a;
+  --gradient-hero: radial-gradient(
+      ellipse at 20% 50%,
+      rgba(232, 101, 0, 0.07) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(245, 166, 35, 0.05) 0%,
+      transparent 50%
+    ),
+    #fdf8f4;
 }
 
 /* ─── Base ─── */
@@ -42,6 +74,22 @@ body {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.shimmer,
+.aurora,
+[data-framer-motion] {
+  transition: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -54,9 +102,24 @@ html {
 
 ::selection { background: var(--color-accent); color: #0a0a0a; }
 
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+[data-theme="light"] ::selection {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
 /* ─── Utility classes ─── */
 
 .accent-glow {
+  color: var(--color-accent);
+  text-shadow: 0 0 20px var(--color-accent-glow),
+               0 0 40px var(--color-accent-glow);
+}
+
+[data-theme="light"] .accent-glow {
   color: var(--color-accent);
   text-shadow: 0 0 20px var(--color-accent-glow),
                0 0 40px var(--color-accent-glow);
@@ -77,6 +140,38 @@ html {
   );
   background-size: 200% 100%;
   animation: shimmer 1.8s infinite;
+}
+
+[data-theme="light"] .shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-border) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
+
+.grain-overlay {
+  opacity: 0.03;
+}
+
+[data-theme="light"] .grain-overlay {
+  opacity: 0.015;
+}
+
+[data-theme="light"] .navbar-glass {
+  background: rgba(253, 248, 244, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="light"] .project-card:hover {
+  box-shadow: 0 8px 32px rgba(232, 101, 0, 0.15);
+}
+
+[data-theme="light"] .skill-card:hover {
+  box-shadow: 0 0 20px rgba(232, 101, 0, 0.2);
 }
 
 /* ─── Button shimmer sweep ─── */

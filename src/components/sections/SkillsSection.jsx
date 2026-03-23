@@ -83,7 +83,7 @@ function SkillCard({ name, icon: Icon, index }) {
           },
         },
       }}
-      className="group flex flex-col items-center gap-3 rounded-xl cursor-default"
+      className="skill-card group flex flex-col items-center gap-3 rounded-xl cursor-default"
       style={{
         background: "var(--color-surface)",
         border: "0.5px solid var(--color-border)",
