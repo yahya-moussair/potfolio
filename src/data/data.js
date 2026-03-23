@@ -1,11 +1,5 @@
-import {
-  Code2,
-  Server,
-  Wrench,
-  Palette,
-  Zap,
-  Heart,
-} from "lucide-react";
+import { HiLightningBolt, HiHeart } from "react-icons/hi";
+import { VscCode } from "react-icons/vsc";
 
 export const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Contact"];
 
@@ -26,63 +20,22 @@ export const STATS = [
 
 export const VALUES = [
   {
-    icon: Zap,
+    icon: HiLightningBolt,
     title: "Performance-First",
     desc: "Every millisecond matters. I build apps that are fast, lean, and optimized.",
   },
   {
-    icon: Heart,
+    icon: HiHeart,
     title: "User-Centered Design",
     desc: "Beautiful interfaces are meaningless without great usability and accessibility.",
   },
   {
-    icon: Code2,
+    icon: VscCode,
     title: "Clean Code Advocate",
     desc: "Readable, maintainable, tested — code should be a joy to work with.",
   },
 ];
 
-export const SKILLS = {
-  Frontend: [
-    { name: "React", level: 95 },
-    { name: "TypeScript", level: 88 },
-    { name: "Next.js", level: 85 },
-    { name: "Tailwind CSS", level: 92 },
-    { name: "Framer Motion", level: 80 },
-    { name: "Vue.js", level: 70 },
-  ],
-  Backend: [
-    { name: "Node.js", level: 90 },
-    { name: "Python", level: 82 },
-    { name: "PostgreSQL", level: 85 },
-    { name: "GraphQL", level: 78 },
-    { name: "REST APIs", level: 92 },
-    { name: "Redis", level: 72 },
-  ],
-  DevOps: [
-    { name: "Docker", level: 80 },
-    { name: "AWS", level: 75 },
-    { name: "CI/CD", level: 82 },
-    { name: "Git", level: 95 },
-    { name: "Linux", level: 78 },
-    { name: "Nginx", level: 70 },
-  ],
-  Design: [
-    { name: "Figma", level: 85 },
-    { name: "UI/UX", level: 80 },
-    { name: "Responsive", level: 92 },
-    { name: "Accessibility", level: 78 },
-    { name: "Prototyping", level: 75 },
-    { name: "Design Systems", level: 82 },
-  ],
-};
-
-export const SKILL_CATEGORY_ICONS = {
-  Frontend: Code2,
-  Backend: Server,
-  DevOps: Wrench,
-  Design: Palette,
-};
 
 export const PROJECTS = [
   {

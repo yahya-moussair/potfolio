@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Quote } from "lucide-react";
+import { RiDoubleQuotesL } from "react-icons/ri";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { TESTIMONIALS } from "@/data/data";
@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
                   className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl pointer-events-none"
                   style={{ background: "var(--color-accent-glow)", opacity: 0.05 }}
                 />
-                <Quote
+                <RiDoubleQuotesL
                   size={32}
                   className="mb-5 shrink-0"
                   style={{ color: "var(--color-accent)", opacity: 0.3 }}

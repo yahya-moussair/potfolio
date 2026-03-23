@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ExternalLink, ChevronDown } from "lucide-react";
+import { HiExternalLink, HiChevronDown } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
 import { JOB_TITLES } from "@/data/data";
 import { useTypewriter } from "@/hooks/hooks";
@@ -104,7 +104,7 @@ export default function HeroSection() {
             }
           >
             View My Work
-            <ExternalLink className="ml-2" size={18} />
+            <HiExternalLink className="ml-2" size={18} />
           </Button>
           {/* <Button
             variant="outline"
@@ -113,7 +113,7 @@ export default function HeroSection() {
           >
             <span className="relative z-10 flex items-center">
               Download CV
-              <ChevronDown className="ml-2 transition-transform group-hover:translate-y-0.5" size={18} />
+              <HiChevronDown className="ml-2 transition-transform group-hover:translate-y-0.5" size={18} />
             </span>
           </Button> */}
         </motion.div>

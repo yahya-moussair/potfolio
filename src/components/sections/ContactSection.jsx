@@ -1,15 +1,10 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-  Mail,
-  Github,
-  Linkedin,
-  Twitter,
-  ExternalLink,
-  Send,
-  Loader2,
-  CheckCircle2,
-} from "lucide-react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { HiMail, HiExternalLink } from "react-icons/hi";
+import { HiPaperAirplane } from "react-icons/hi";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { HiCheckCircle } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -36,10 +31,10 @@ function FloatingTextarea({ label, ...props }) {
 }
 
 const CONTACT_LINKS = [
-  { icon: Mail, label: "yahya@example.com", href: "mailto:yahya@example.com" },
-  { icon: Github, label: "github.com/yahya-dev", href: "https://github.com" },
-  { icon: Linkedin, label: "linkedin.com/in/yahya", href: "https://linkedin.com" },
-  { icon: Twitter, label: "@yahya_dev", href: "https://twitter.com" },
+  { icon: HiMail, label: "yahya@example.com", href: "mailto:yahya@example.com" },
+  { icon: FaGithub, label: "github.com/yahya-dev", href: "https://github.com" },
+  { icon: FaLinkedin, label: "linkedin.com/in/yahya", href: "https://linkedin.com" },
+  { icon: FaTwitter, label: "@yahya_dev", href: "https://twitter.com" },
 ];
 
 export default function ContactSection() {
@@ -135,7 +130,7 @@ export default function ContactSection() {
                   >
                     {link.label}
                   </span>
-                  <ExternalLink
+                  <HiExternalLink
                     size={14}
                     className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
                     style={{ color: "var(--color-accent)" }}
@@ -165,17 +160,17 @@ export default function ContactSection() {
                 >
                   {sending ? (
                     <>
-                      <Loader2 size={18} className="mr-2 animate-spin" />
+                      <AiOutlineLoading3Quarters size={18} className="mr-2 animate-spin" />
                       Sending...
                     </>
                   ) : sent ? (
                     <>
-                      <CheckCircle2 size={18} className="mr-2" />
+                      <HiCheckCircle size={18} className="mr-2" />
                       Message Sent!
                     </>
                   ) : (
                     <>
-                      <Send size={18} className="mr-2" />
+                      <HiPaperAirplane size={18} className="mr-2" />
                       Send Message
                     </>
                   )}

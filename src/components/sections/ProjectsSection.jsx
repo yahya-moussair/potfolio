@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Globe, Github } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { HiGlobe } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -169,11 +170,11 @@ export default function ProjectsSection() {
 
                   <CardFooter className="gap-3">
                     <Button size="sm" className="flex-1 btn-shimmer text-xs">
-                      <Globe size={13} className="mr-1.5" />
+                      <HiGlobe size={13} className="mr-1.5" />
                       Live Demo
                     </Button>
                     <Button variant="outline" size="sm" className="flex-1 text-xs">
-                      <Github size={13} className="mr-1.5" />
+                      <FaGithub size={13} className="mr-1.5" />
                       GitHub
                     </Button>
                   </CardFooter>

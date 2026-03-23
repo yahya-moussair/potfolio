@@ -1,10 +1,11 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
 
 const SOCIAL_LINKS = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:yahya@example.com", label: "Email" },
+  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
+  { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: HiMail, href: "mailto:yahya@example.com", label: "Email" },
 ];
 
 export default function Footer() {

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Calendar, MapPin } from "lucide-react";
+import { HiCalendar, HiLocationMarker } from "react-icons/hi";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { EXPERIENCE } from "@/data/data";
@@ -78,11 +78,11 @@ export default function ExperienceSection() {
                     >
                       <div className="flex items-center gap-2 mb-3 flex-wrap">
                         <Badge variant="secondary" className="text-[10px] tracking-wider uppercase">
-                          <Calendar size={10} className="mr-1" />
+                          <HiCalendar size={10} className="mr-1" />
                           {exp.date}
                         </Badge>
                         <Badge variant="outline" className="text-[10px] tracking-wider uppercase">
-                          <MapPin size={10} className="mr-1" />
+                          <HiLocationMarker size={10} className="mr-1" />
                           {exp.location}
                         </Badge>
                       </div>

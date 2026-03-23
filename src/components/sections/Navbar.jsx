@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { NAV_LINKS } from "@/data/data";
 import { useActiveSection } from "@/hooks/hooks";
 import logo from "@/assets/me/logo.png";
@@ -102,11 +102,11 @@ export default function Navbar() {
           <AnimatePresence mode="wait">
             {mobileOpen ? (
               <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                <X size={24} />
+                <HiX size={24} />
               </motion.div>
             ) : (
               <motion.div key="m" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                <Menu size={24} />
+                <HiMenuAlt3 size={24} />
               </motion.div>
             )}
           </AnimatePresence>

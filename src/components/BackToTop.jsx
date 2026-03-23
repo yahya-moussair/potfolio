@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUp } from "lucide-react";
+import { HiArrowUp } from "react-icons/hi";
 
 export default function BackToTop() {
   const [visible, setVisible] = useState(false);
@@ -31,7 +31,7 @@ export default function BackToTop() {
           whileTap={{ scale: 0.9 }}
           aria-label="Back to top"
         >
-          <ArrowUp size={20} />
+          <HiArrowUp size={20} />
         </motion.button>
       )}
     </AnimatePresence>
