@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   SiHtml5,
-  SiCss3,
   SiSass,
   SiBootstrap,
   SiTailwindcss,
@@ -14,11 +13,12 @@ import {
   SiInertia,
   SiWordpress,
   SiMysql,
-  SiMicrosoftsqlserver,
   SiGit,
   SiGithub,
   SiGnubash,
 } from "react-icons/si";
+import { DiMsqlServer } from "react-icons/di";
+import { FaCss3  } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
 import SectionTitle from "@/components/SectionTitle";
 
@@ -28,7 +28,7 @@ const SKILL_CATEGORIES = [
     tag: "FRONTEND",
     skills: [
       { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss3 },
+      { name: "CSS", icon: FaCss3 },
       { name: "Sass", icon: SiSass },
       { name: "Bootstrap", icon: SiBootstrap },
       { name: "Tailwind CSS", icon: SiTailwindcss },
@@ -54,7 +54,7 @@ const SKILL_CATEGORIES = [
     tag: "DATABASE",
     skills: [
       { name: "MySQL", icon: SiMysql },
-      { name: "SQL Server", icon: SiMicrosoftsqlserver },
+      { name: "SQL Server", icon: DiMsqlServer  },
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
     ],
