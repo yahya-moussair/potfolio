@@ -120,9 +120,9 @@ export default function ContactSection() {
     setStatus("loading");
 
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      subject: formData.subject,
+      name: formData.name,
+      form_email: formData.email,
+      form_subject: formData.subject,
       message: formData.message,
       reply_to: formData.email,
     };
