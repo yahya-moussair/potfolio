@@ -32,15 +32,15 @@ function FloatingTextarea({ label, ...props }) {
 }
 
 const CONTACT_LINKS = [
-  { icon: HiMail, label: "yahya@example.com", href: "mailto:yahya@example.com" },
-  { icon: FaGithub, label: "github.com/yahya-dev", href: "https://github.com" },
-  { icon: FaLinkedin, label: "linkedin.com/in/yahya", href: "https://linkedin.com" },
-  { icon: FaTwitter, label: "@yahya_dev", href: "https://twitter.com" },
+  { icon: HiMail, label: "yahyamoussair@gmail.com.com", href: "mailto:yahyamoussair@gmail.com" },
+  { icon: FaGithub, label: "github.com/yahya-yahya-moussair", href: "https://github.com/yahya-moussair" },
+  { icon: FaLinkedin, label: "linkedin.com/in/yahya-moussair", href: "https://linkedin.com/in/yahya-moussair" },
+  { icon: FaTwitter, label: "@yahya_moussair", href: "https://twitter.com/yahya_moussair" },
 ];
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || import.meta.env.REACT_APP_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || import.meta.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || import.meta.env.EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || import.meta.env.EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || import.meta.env.EMAILJS_PUBLIC_KEY;
 
 const Spinner = () => (
   <span
