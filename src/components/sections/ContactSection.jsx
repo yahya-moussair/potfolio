@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { clipReveal, staggerContainer } from "@/data/animations";
 import SectionTitle from "@/components/SectionTitle";
+import SuccessMessageDialog from "@/components/SuccessMessageDialog";
 
 void motion;
 
@@ -64,6 +65,7 @@ export default function ContactSection() {
     message: "",
   });
   const [status, setStatus] = useState("idle");
+  const [showModal, setShowModal] = useState(false);
   // 'idle' | 'loading' | 'success' | 'error'
 
   const sectionRef = useRef(null);
@@ -136,8 +138,8 @@ export default function ContactSection() {
       );
 
       setStatus("success");
+      setShowModal(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-      resetStatusToIdle();
     } catch (error) {
       console.error("EmailJS error:", error);
       setStatus("error");
@@ -276,12 +278,10 @@ export default function ContactSection() {
                   className="w-full btn-shimmer"
                   style={{
                     background:
-                      status === "success"
-                        ? "var(--color-success)"
-                        : status === "error"
+                      status === "error"
                           ? "#ef4444"
                           : "var(--color-accent)",
-                    color: status === "idle" ? "#0a0a0a" : "#ffffff",
+                    color: status === "error" ? "#ffffff" : "#0a0a0a",
                     transition: "all 0.3s ease",
                     opacity: status === "loading" ? 0.75 : 1,
                     cursor: status === "loading" ? "not-allowed" : "pointer",
@@ -311,57 +311,39 @@ export default function ContactSection() {
                   )}
                   {status === "success" && (
                     <>
-                      <HiCheck size={18} />
+                      <HiCheck className="text-center" size={18} />
                       Message Sent!
                     </>
                   )}
                   {status === "error" && (
                     <>
-                      <HiExclamationCircle size={18} />
+                      <HiExclamationCircle  size={18} />
                       Failed. Try again
                     </>
                   )}
                 </button>
 
-                {status === "success" && (
-                  <p
-                    style={{
-                      color: "var(--color-success)",
-                      fontSize: "13px",
-                      marginTop: "8px",
-                      animation: "fadeUp 0.4s ease forwards",
-                    }}
-                  >
-                    ✓ Your message was sent! I&apos;ll get back to you soon.
-                  </p>
-                )}
-
-                {status === "error" && (
-                  <p
-                    style={{
-                      color: "#ef4444",
-                      fontSize: "13px",
-                      marginTop: "8px",
-                      animation: "fadeUp 0.4s ease forwards",
-                    }}
-                  >
-                    ✗ Something went wrong. Please try again or email me directly.
-                  </p>
-                )}
               </form>
             </Card>
           </motion.div>
         </motion.div>
       </div>
+      <SuccessMessageDialog
+        open={showModal}
+        onOpenChange={(open) => {
+          setShowModal(open);
+          if (!open) setStatus("idle");
+        }}
+        onConfirm={() => {
+          setShowModal(false);
+          setStatus("idle");
+        }}
+      />
       <style>
         {`
           @keyframes spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
-          }
-          @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
           }
         `}
       </style>
