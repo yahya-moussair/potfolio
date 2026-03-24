@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiMail, HiExternalLink } from "react-icons/hi";
 import { HiPaperAirplane, HiCheck } from "react-icons/hi";
 import { HiExclamationCircle } from "react-icons/hi2";
@@ -33,10 +33,10 @@ function FloatingTextarea({ label, ...props }) {
 }
 
 const CONTACT_LINKS = [
-  { icon: HiMail, label: "yahyamoussair@gmail.com.com", href: "mailto:yahyamoussair@gmail.com" },
-  { icon: FaGithub, label: "github.com/yahya-yahya-moussair", href: "https://github.com/yahya-moussair" },
+  { icon: HiMail, label: "yahyamoussair@gmail.com", href: "mailto:yahyamoussair@gmail.com" },
+  { icon: FaGithub, label: "github.com/yahya-moussair", href: "https://github.com/yahya-moussair" },
   { icon: FaLinkedin, label: "linkedin.com/in/yahya-moussair", href: "https://linkedin.com/in/yahya-moussair" },
-  { icon: FaTwitter, label: "@yahya_moussair", href: "https://twitter.com/yahya_moussair" },
+  { icon: FaInstagram, label: "@yahya.moussair", href: "https://instagram.com/yahya.moussair" },
 ];
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || import.meta.env.EMAILJS_SERVICE_ID;
@@ -176,14 +176,14 @@ export default function ContactSection() {
             >
               Let&apos;s connect
             </h3>
-            <p
+            {/* <p
               className="text-sm leading-relaxed mb-10 tracking-normal"
               style={{ color: "var(--color-text-muted)" }}
             >
               I&apos;m always open to new opportunities, collaborations, and
               interesting conversations. Whether you have a project idea or just
               want to say hello — my inbox is always open.
-            </p>
+            </p> */}
 
             <div className="space-y-4">
               {CONTACT_LINKS.map((link) => (
