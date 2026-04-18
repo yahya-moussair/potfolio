@@ -7,6 +7,7 @@ import imgClbKlb from "@/assets/projects/clb-klb.PNG";
 import imgCasamemoire from "@/assets/projects/casamemoire.PNG";
 import imgPortfolio from "@/assets/projects/portfolio.PNG";
 import imgTivro from "@/assets/projects/miniEcom.PNG";
+import imgEcolesBelges from "@/assets/projects/ecolebelge.png";
 
 export const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Contact"];
 
@@ -109,6 +110,17 @@ const projects = [
     tags: ["React", "Tailwind"],
     github: "https://github.com/yahya-moussair/react_ecommerce_website.git",
     demo: "https://tivro-web.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "Écoles Belges",
+    description:
+      "A responsive institutional website for Écoles Belges au Maroc. Showcases a structured educational ecosystem with a focus on pedagogy, academic excellence, and multilingual learning, delivered through a clear, content-driven and user-friendly interface.",
+    category: "frontend",
+    image: imgEcolesBelges,
+    tags: ["React", "Tailwind", "Typescript"],
+    github: null,
+    demo: "https://ecolebelgue.mylionsgeek.ma/",
   },
 ];
 
